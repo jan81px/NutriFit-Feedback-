@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriFit - Feedback page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <a href="https://nutrifit-homepage.netlify.app/">
+            <img src="./logo.png" alt="Logo" class="logo">
+        </a>
+        <div class="hamburger" onclick="toggleMenu()" id="hamburgerIcon">☰</div>
+        <div class="nav-links" id="navLinks">
+            <a href="#" class="feedback">Feedback</a>
+            <a href="#" class="more-info">More Info</a>
+            <a href="https://nutrifit-mealplans.netlify.app/" class="meal-plans">Meal Plans</a>
+            <a href="#" class="meal-plans">Diets</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+        
+            <label for="last-name">Last Name (optional):</label>
+            <input type="text" id="last-name" name="last-name">
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        
+            <input type="hidden" name="_captcha" value="false"> <!-- Prevents annoying CAPTCHA pop-ups -->
+            
+            <button type="submit">Submit</button>
+        </form>        
+    </div>
+</body>
+</html>
